@@ -17,8 +17,8 @@ Pregnancies = st.number_input("Pregnancies:", min_value=0)
 try:
     with open('qarorlar_daraxti_model.pkl', 'rb') as file:
         decision_tree_model = pickle.load(file)
-except Exception as e:
-    st.error(f"Modelni yuklashda xato: {e}")
+#except Exception as e:
+ #   st.error(f"Modelni yuklashda xato: {e}")
 
 # Bashorat uchun tugma
 if st.button("Bashorat qilish"):
