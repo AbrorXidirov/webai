@@ -1,7 +1,6 @@
 import numpy as np
 import streamlit as st
 import pickle
-
 st.title("Bemorni tekshirish:")
 
 # Yosh
@@ -13,12 +12,12 @@ BMI = st.number_input("BMI: ", format="%.1f", min_value=0.0)
 # Pregnancies
 Pregnancies = st.number_input("Pregnancies:", min_value=0)
 
-#. Tajribaga ega modelni chaqirish
-#try:
- with open('qarorlar_daraxti_model.pkl', 'rb') as file:
-      decision_tree_model = pickle.load(file)
-#except Exception as e:
- #   st.error(f"Modelni yuklashda xato: {e}")
+# Tajribaga ega modelni chaqirish
+try:
+    with open('qarorlar_daraxti_model.pkl', 'rb') as file:
+        decision_tree_model = pickle.load(file)
+except Exception as e:
+    st.error(f"Modelni yuklashda xato: {e}")
 
 # Bashorat uchun tugma
 if st.button("Bashorat qilish"):
