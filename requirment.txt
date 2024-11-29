@@ -1,3 +1,4 @@
+sklearn
 fastai
 streamlit
 numpy
