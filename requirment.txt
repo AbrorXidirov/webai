@@ -1,5 +1,3 @@
-sklearn
-fastai
 streamlit
+scikit-learn
 numpy
-pickle
